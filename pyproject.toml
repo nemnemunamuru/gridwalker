@@ -1,0 +1,25 @@
+[project]
+name = "gridwalker"
+version = "0.1.0"
+description = "Grid path generator GUI and library"
+requires-python = ">=3.13"
+dependencies = [
+  "matplotlib>=3.10.9",
+  "numpy>=2.4.4",
+  "pandas>=3.0.2",
+]
+
+[tool]
+[tool.gridwalker]
+# Project-specific tool config can go here
+
+[project.scripts]
+uv = "gridwalker_lib.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gridwalker_lib"]
